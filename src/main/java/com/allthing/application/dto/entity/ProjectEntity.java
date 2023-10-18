@@ -11,7 +11,7 @@ public interface ProjectEntity {
     
     LocalDateTime getDateCreated();
     
-    List<Decision> getDecisionList();
+    List<DecisionEntity> getDecisionList();
     
     LocalDateTime getLastEdited();
     
