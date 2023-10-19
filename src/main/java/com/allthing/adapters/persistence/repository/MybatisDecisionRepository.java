@@ -33,7 +33,7 @@ public interface MybatisDecisionRepository {
             @Result(property = "approvalDate", column = "approval_date", javaType = LocalDate.class),
             @Result(property = "comments", column = "comments", javaType = String.class)
     })
-    MybatisDecisionEntity create(MybatisDecisionEntity decision);
+    Long create(MybatisDecisionEntity decision);
     
     @Delete({
             "DELETE FROM decision " +

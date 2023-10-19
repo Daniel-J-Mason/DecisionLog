@@ -18,8 +18,8 @@ public class DecisionRepository implements CreateDecisionPort, UpdateDecisionPor
     private final DecisionEntityMapper<MybatisDecisionEntity> decisionEntityMapper;
     
     @Override
-    public Decision create(Decision decision) {
-        return decisionEntityMapper.map(mybatisDecisionRepository.create(decisionEntityMapper.map(decision)));
+    public Long create(Decision decision) {
+        return mybatisDecisionRepository.create(decisionEntityMapper.map(decision));
     }
     
     @Override

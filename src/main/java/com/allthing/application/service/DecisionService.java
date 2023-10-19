@@ -20,8 +20,8 @@ public class DecisionService implements CreateDecisionUseCase, DeleteDecisionByI
     private final DecisionDtoMapper decisionDtoMapper;
     
     @Override
-    public DecisionDto create(DecisionDto decisionDto) {
-        return decisionDtoMapper.map(createDecisionPort.create(decisionDtoMapper.map(decisionDto)));
+    public Long create(DecisionDto decisionDto) {
+        return createDecisionPort.create(decisionDtoMapper.map(decisionDto));
     }
     
     @Override
