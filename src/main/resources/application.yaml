@@ -1,0 +1,8 @@
+spring:
+  liquibase:
+    enabled: true
+    change-log: classpath:db/changelog/changelog.xml
+
+  datasource:
+    url:  jdbc:sqlite:database_name.db
+    driver-class-name: org.sqlite.JDBC

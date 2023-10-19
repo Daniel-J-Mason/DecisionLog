@@ -6,21 +6,25 @@ import com.allthing.application.domain.Status;
 import java.time.LocalDate;
 
 public interface DecisionDto {
+    LocalDate getApprovalDate();
+    
     String getApprovedBy();
     
-    Category getCategory();
+    String getCategory();
     
     String getComments();
     
-    LocalDate getDecisionDate();
-    
     String getDetails();
+    
+    Long getNumber();
+    
+    LocalDate getProposalDate();
     
     String getProposedBy();
     
     String getResponsibleParty();
     
-    Status getStatus();
+    String getStatus();
     
     ProjectDto getProject();
 }

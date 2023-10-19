@@ -21,13 +21,15 @@ import java.util.UUID;
 @Builder
 public class MybatisDecisionEntity implements DecisionEntity {
     private UUID id;
+    private LocalDate approvalDate;
     private String approvedBy;
-    private Category category;
+    private String category;
     private String comments;
-    private LocalDate decisionDate;
     private String details;
+    private Long number;
+    private LocalDate proposalDate;
     private String proposedBy;
     private String responsibleParty;
-    private Status status;
+    private String status;
     private MybatisProjectEntity project;
 }

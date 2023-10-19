@@ -1,6 +1,5 @@
 package com.allthing.application.dto.entity;
 
-import com.allthing.application.domain.Category;
 import com.allthing.application.domain.Status;
 
 import java.time.LocalDate;
@@ -9,21 +8,25 @@ import java.util.UUID;
 public interface DecisionEntity {
     UUID getId();
     
+    LocalDate getApprovalDate();
+    
     String getApprovedBy();
     
-    Category getCategory();
+    String getCategory();
     
     String getComments();
     
-    LocalDate getDecisionDate();
-    
     String getDetails();
+    
+    Long getNumber();
+    
+    LocalDate getProposalDate();
     
     String getProposedBy();
     
     String getResponsibleParty();
     
-    Status getStatus();
+    String getStatus();
     
     ProjectEntity getProject();
 }

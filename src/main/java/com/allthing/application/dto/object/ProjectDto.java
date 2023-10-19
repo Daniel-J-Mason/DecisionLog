@@ -9,7 +9,7 @@ import java.util.UUID;
 public interface ProjectDto {
     LocalDateTime getDateCreated();
     
-    List<Decision> getDecisionList();
+    List<? extends DecisionDto> getDecisionList();
     
     LocalDateTime getLastEdited();
     

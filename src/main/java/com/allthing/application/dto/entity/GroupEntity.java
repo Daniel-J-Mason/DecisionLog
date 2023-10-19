@@ -8,5 +8,5 @@ public interface GroupEntity {
     
     String getName();
     
-    List<ProjectEntity> getProjectList();
+    List<? extends ProjectEntity> getProjectList();
 }

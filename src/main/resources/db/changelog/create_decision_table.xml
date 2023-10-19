@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="create_decision_table" author="daniel-j-mason">
+        <createTable tableName="decision">
+            <column name="id" type="uuid">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="number" type="integer"/>
+            <column name="category" type="text"/>
+            <column name="details" type="text"/>
+            <column name="responsible_party" type="text"/>
+            <column name="proposal_date" type="text"/>
+            <column name="proposal_date" type="text"/>
+            <column name="proposed_by" type="text"/>
+            <column name="status" type="text"/>
+            <column name="approved_by" type="text"/>
+            <column name="approval_date" type="text"/>
+            <column name="comments" type="text"/>
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>

@@ -22,12 +22,14 @@ ext {
     liquibaseVersion = '4.22.0'
     lombokVersion = '1.18.28'
     mockitoVersion = '5.4.0'
+    mybatisSpringBootVersion = '3.0.2'
     springBootVersion = '3.1.0'
     sqliteVersion = '3.42.0.0'
 }
 
 dependencies {
     implementation "org.liquibase:liquibase-core:${liquibaseVersion}"
+    implementation "org.mybatis.spring.boot:mybatis-spring-boot-starter:${mybatisSpringBootVersion}"
     implementation "org.springframework.boot:spring-boot-starter:${springBootVersion}"
     implementation "org.springframework.boot:spring-boot-starter-jdbc:${springBootVersion}"
     implementation "org.xerial:sqlite-jdbc:${sqliteVersion}"
