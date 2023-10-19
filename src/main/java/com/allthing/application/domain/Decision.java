@@ -26,6 +26,4 @@ public class Decision {
     private String proposedBy;
     private String responsibleParty;
     private Status status;
-    
-    private Project project; //TODO: determine whether uni or bi-directional is best
 }

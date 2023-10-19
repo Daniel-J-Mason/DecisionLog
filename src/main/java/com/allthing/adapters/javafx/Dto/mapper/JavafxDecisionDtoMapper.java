@@ -8,6 +8,7 @@ import com.allthing.application.dto.object.DecisionDto;
 import com.allthing.application.dto.object.mapper.DecisionDtoMapper;
 
 import java.util.Optional;
+import java.util.UUID;
 
 public class JavafxDecisionDtoMapper implements DecisionDtoMapper {
     @Override
@@ -33,6 +34,7 @@ public class JavafxDecisionDtoMapper implements DecisionDtoMapper {
     @Override
     public Decision map(DecisionDto decisionDto) {
         return Decision.builder()
+                .id(UUID.randomUUID())
                 .approvalDate(decisionDto.getApprovalDate())
                 .approvedBy(decisionDto.getApprovedBy())
                 .category(Category.valueOf(decisionDto.getCategory()))

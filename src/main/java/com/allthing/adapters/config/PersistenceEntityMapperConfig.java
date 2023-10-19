@@ -11,17 +11,15 @@ public class PersistenceEntityMapperConfig {
     
     
     @Bean
-    public MybatisDecisionEntityMapper mybatisDecisionEntityMapper(
-            MybatisProjectEntityMapper mybatisProjectEntityMapper){
-        return new MybatisDecisionEntityMapper(mybatisProjectEntityMapper);
+    public MybatisDecisionEntityMapper mybatisDecisionEntityMapper(){
+        return new MybatisDecisionEntityMapper();
     }
     
     
     @Bean
     public MybatisProjectEntityMapper mybatisProjectEntityMapper(
-            MybatisDecisionEntityMapper mybatisDecisionEntityMapper,
-            MybatisGroupEntityMapper mybatisGroupEntityMapper){
-        return new MybatisProjectEntityMapper(mybatisDecisionEntityMapper, mybatisGroupEntityMapper);
+            MybatisDecisionEntityMapper mybatisDecisionEntityMapper){
+        return new MybatisProjectEntityMapper(mybatisDecisionEntityMapper);
     }
     
     @Bean

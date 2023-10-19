@@ -14,7 +14,6 @@
             <column name="details" type="text"/>
             <column name="responsible_party" type="text"/>
             <column name="proposal_date" type="text"/>
-            <column name="proposal_date" type="text"/>
             <column name="proposed_by" type="text"/>
             <column name="status" type="text"/>
             <column name="approved_by" type="text"/>

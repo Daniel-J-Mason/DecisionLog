@@ -15,8 +15,6 @@ import java.util.Optional;
 @RequiredArgsConstructor
 public class MybatisDecisionEntityMapper implements DecisionEntityMapper<MybatisDecisionEntity> {
     
-    private final ProjectEntityMapper<MybatisProjectEntity> projectEntityMapper;
-    
     @Override
     public Decision map(DecisionEntity decisionEntity) {
         return Decision.builder()
@@ -27,7 +25,6 @@ public class MybatisDecisionEntityMapper implements DecisionEntityMapper<Mybatis
                 .comments(decisionEntity.getComments())
                 .details(decisionEntity.getDetails())
                 .number(decisionEntity.getNumber())
-                .project(projectEntityMapper.map(decisionEntity.getProject()))
                 .proposalDate(decisionEntity.getProposalDate())
                 .proposedBy(decisionEntity.getProposedBy())
                 .responsibleParty(decisionEntity.getResponsibleParty())
@@ -47,7 +44,6 @@ public class MybatisDecisionEntityMapper implements DecisionEntityMapper<Mybatis
                 .comments(decision.getComments())
                 .details(decision.getDetails())
                 .number(decision.getNumber())
-                .project(projectEntityMapper.map(decision.getProject()))
                 .proposalDate(decision.getProposalDate())
                 .proposedBy(decision.getProposedBy())
                 .responsibleParty(decision.getResponsibleParty())

@@ -6,7 +6,6 @@ import com.allthing.adapters.persistence.entity.MybatisProjectEntity;
 import com.allthing.application.domain.Project;
 import com.allthing.application.dto.entity.ProjectEntity;
 import com.allthing.application.dto.entity.mapper.DecisionEntityMapper;
-import com.allthing.application.dto.entity.mapper.GroupEntityMapper;
 import com.allthing.application.dto.entity.mapper.ProjectEntityMapper;
 import lombok.RequiredArgsConstructor;
 
@@ -14,7 +13,6 @@ import lombok.RequiredArgsConstructor;
 public class MybatisProjectEntityMapper implements ProjectEntityMapper<MybatisProjectEntity> {
     
     private final DecisionEntityMapper<MybatisDecisionEntity> decisionEntityMapper;
-    private final GroupEntityMapper<MybatisGroupEntity> groupEntityMapper;
     
     @Override
     public Project map(ProjectEntity projectEntity) {
@@ -25,7 +23,6 @@ public class MybatisProjectEntityMapper implements ProjectEntityMapper<MybatisPr
                 .lastEdited(projectEntity.getLastEdited())
                 .name(projectEntity.getName())
                 .urlReference(projectEntity.getUrlReference())
-                .group(groupEntityMapper.map(projectEntity.getGroup()))
                 .build();
     }
     
@@ -38,7 +35,6 @@ public class MybatisProjectEntityMapper implements ProjectEntityMapper<MybatisPr
                 .lastEdited(project.getLastEdited())
                 .name(project.getName())
                 .urlReference(project.getUrlReference())
-                .group(groupEntityMapper.map(project.getGroup()))
                 .build();
     }
 }

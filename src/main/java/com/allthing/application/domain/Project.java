@@ -22,6 +22,4 @@ public class Project {
     private LocalDateTime lastEdited;
     private String name;
     private String urlReference;
-    
-    private Group group; //TODO: determine whether uni or bi-directional is best
 }

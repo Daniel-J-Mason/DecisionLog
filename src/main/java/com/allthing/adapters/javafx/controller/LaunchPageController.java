@@ -5,6 +5,8 @@ import com.allthing.application.service.DecisionService;
 import javafx.event.ActionEvent;
 import lombok.RequiredArgsConstructor;
 
+import java.time.LocalDate;
+
 @RequiredArgsConstructor
 public class LaunchPageController {
     
@@ -14,6 +16,14 @@ public class LaunchPageController {
         decisionService.create(JavafxDecisionDto.builder()
                         .number(1L)
                         .details("SomeNotes")
+                        .category("PROCESS")
+                        .details("details")
+                        .responsibleParty("Me")
+                        .proposalDate(LocalDate.now())
+                        .proposedBy("Me")
+                        .status("APPROVED")
+                        .approvalDate(LocalDate.now())
+                        .comments("Comments")
                         .build());
     }
 }
